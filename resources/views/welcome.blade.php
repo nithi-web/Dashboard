@@ -75,44 +75,61 @@
 ​
 
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+          <a class="navbar-brand" href="/">Home</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="/form">Insert Data <span class="sr-only">(current)</span></a>
+                  </li>
+                  &nbsp;
+                  <li class="nav-item active">
+                      <a class="nav-link" href="/#">Gallery <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="/#">About Us <span class="sr-only">(current)</span></a>
+                  </li>
+               
+
+
+                  <li class="nav-item form-inline my-2 my-lg-0">
+                      <div class="navsearch">
+               
+                  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+                  <form method="get" action="/search">
+                      <div class="input-group stylish-input-group">
+                          <input type="text" id="Search" name="text" class="form-control" placeholder="Search(name,place,vehicle)">
+                          <span class="input-group-addon">
+                              <button type="submit">
+                                  <span class="glyphicon glyphicon-search"></span>
+                              </button>
+                          </span>
+                      </div>
+
+                  </form>
+          </div>
+          </li>
 
 
 
+          </ul>
+
+
+      </nav>
 
     <div class="container">
-        <nav class="navbar navbar-light bg-light p-3">
-            <div class="d-flex col-12 col-md-3 col-lg-2 mb-2 mb-lg-0 flex-wrap flex-md-nowrap justify-content-between">
-                <a class="navbar-brand" href="#">
-                    Simple Dashboard
-                </a>
-                <button class="navbar-toggler d-md-none collapsed mb-3" type="button" data-toggle="collapse" data-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            <div class="col-12 col-md-4 col-lg-2">
-                <input class="form-control form-control-dark" type="text" placeholder="Search" aria-label="Search">
-            </div>
-            <div class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-md-end mt-3 mt-md-0">
 
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
-                      Menu
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <li><a class="dropdown-item" href="#">Settings</a></li>
-                      <li><a class="dropdown-item" href="#">Messages</a></li>
-                      <li><a class="dropdown-item" href="#">Sign out</a></li>
-                    </ul>
-                  </div>
-            </div>
-          </nav>
         <div class="row">
             <div class="col-lg-12 col-sm-4 col-md-6">
             @if(session('success'))
                 <div class="alert alert-success">{{session('success')}}</div>
                 @endif
 
-                <a href="/form">Click Here To Insert Data </a>
+         
 
                <h1>Welcome </h1>
 
@@ -184,32 +201,7 @@
 
 
     <script>
-    //     console.log(time);
 
-    // let timer = function (date) {
-    // let timer = Math.round(new Date(date).getTime()/1000) - Math.round(new Date().getTime()/1000);
-	// 	let minutes, seconds;
-	// 	setInterval(function () {
-    //         if (--timer < 0) {
-	// 			timer = 0;
-	// 		}
-
-	// 		days = parseInt(timer / 60 / 60 / 24, 10);
-	// 		hours = parseInt((timer / 60 / 60) % 24, 10);
-	// 		minutes = parseInt((timer / 60) % 60, 10);
-	// 		seconds = parseInt(timer % 60, 10);
-
-	// 		days = days < 10 ? "0" + days : days;
-	// 		hours = hours < 10 ? "0" + hours : hours;
-	// 		minutes = minutes < 10 ? "0" + minutes : minutes;
-	// 		seconds = seconds < 10 ? "0" + seconds : seconds;
-
-	// 		document.getElementById('cd-days').innerHTML = days;
-	// 		document.getElementById('cd-hours').innerHTML = hours;
-	// 		document.getElementById('cd-minutes').innerHTML = minutes;
-	// 		document.getElementById('cd-seconds').innerHTML = seconds;
-	// 	}, 1000);
-	// }
 
     </script>
 

@@ -30,6 +30,17 @@ class DashboardController extends Controller
         return view('welcome',compact('datas'));
     }
 
+    public function search(Request $request)
+    {   
+        $query = $request['text'];
+        $datas = Dashboard::where('department', 'like', '%' . $query . '%')
+            ->orWhere('plant', 'like', '%' . $query . '%')
+            ->orWhere('machine', 'like', '%' . $query . '%')
+            ->take(10)
+            ->get();
+        return view('welcome', compact('datas'));
+    }
+
     public function save(Request $request)
     {
         $data = $request->all();

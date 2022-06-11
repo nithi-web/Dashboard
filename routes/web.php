@@ -20,4 +20,5 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::get('/', 'DashboardController@home');
     Route::get('/form', 'DashboardController@form');
     Route::post('/form', 'DashboardController@save');
+    Route::get('/search', 'DashboardController@search');
 });
