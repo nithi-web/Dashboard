@@ -22,9 +22,7 @@ class DashboardController extends Controller
     public function home()
 
     {
-        // $newDateTime = Carbon::now()->subMinutes(15);
 
-        // dd($newDateTime);
         $date = new DateTime;
         $date->modify('-15 minutes');
         $formatted_date = $date->format('H:i:s');
@@ -35,7 +33,7 @@ class DashboardController extends Controller
     public function save(Request $request)
     {
         $data = $request->all();
-        // $currentTime = Carbon::now();
+
         $date = date('H:i:s', time());
 
         $check = Dashboard::create([

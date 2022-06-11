@@ -62,10 +62,11 @@
         <div class="row">
             <div class="col-lg-12 col-sm-4 col-md-6">
 
-         
+
 
                 <div class="main">
-                   
+                    <a href="/">Back To Dashboard </a>
+
                     <form action="/form" method="post" enctype="multipart/form-data">
                         <h1>Demo App</h1>
                         <h3>Please Fill</h3><br>
@@ -78,14 +79,14 @@
                         <label for="machine"><b>Machine</b></label>
                         <input type="text" value="{{old('machine', '')}}" placeholder="Enter Machine" name="machine">
 
-                        
+
                         <label for="op_no"><b>Op No</b></label>
                         <input type="text" value="{{old('op_no', '')}}" placeholder="Enter Op No" name="op_no">
 
                         <label for="complaint"><b>Complaint</b></label>
                         <input type="text" value="{{old('complaint', '')}}" placeholder="Enter Complaint" name="complaint">
-                        
-                        <label for="date"><b>Date</b></label>
+
+                        <label for="date"><b>Date</b></label><br>
                         <input type="date" value="{{old('cause', '')}}" placeholder="Select Date" name="date"><br><br>
 
                         <label for="cause"><b>Cause</b></label>
@@ -93,12 +94,12 @@
 
 
                         @csrf
-                      
+
                         <button type="submit">Sign Submit</button><br>
                     </form><br>
 
-                    <a href="/"> Back To DashBoard </a>
-                   
+
+
                     <br>
 
 
@@ -111,11 +112,9 @@
 
     <script>
 
-        $(document).ready(function(){
-            $('#checkbox').on('change', function(){
-                $('#pass').attr('type',$('#checkbox').prop('checked')==true?"text":"password");
-            });
-        });
+
+
+
             </script>
 
 </body>
